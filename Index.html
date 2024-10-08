@@ -1,0 +1,49 @@
+    <!DOCTYPE html> 
+    <html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="refresh" content="0; url=" id="redirect"> 
+        <title>Random Redirect</title> 
+        <script> 
+            const urls = [ 
+                "https://www.ynet.co.il/food/alcoholandnightlife/article/sjcynpfut", 
+                "https://anershapiro.com/about/", 
+                "https://www.mdais.org/memorial" ,
+				"https://www.harish.co.il/%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D-%D7%95%D7%97%D7%93%D7%A9%D7%95%D7%AA/%D7%A9%D7%A0%D7%94-%D7%9C%D7%90%D7%97%D7%A8-%D7%9E%D7%AA%D7%A7%D7%A4%D7%AA-%D7%94-7-%D7%91%D7%90%D7%95%D7%A7%D7%98%D7%95%D7%91%D7%A8-%D7%97%D7%A8%D7%99%D7%A9-%D7%9E%D7%AA%D7%99%D7%99%D7%97%D7%93",
+				"https://www.idf.il/%D7%A0%D7%95%D7%A4%D7%9C%D7%99%D7%9D/%D7%97%D7%9C%D7%9C%D7%99-%D7%94%D7%9E%D7%9C%D7%97%D7%9E%D7%94/%D7%A0%D7%95%D7%A2%D7%9D-%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A2%D7%91%D7%93%D7%95/",
+				"https://www.remember-beeri.com/",
+				"https://laad.btl.gov.il/Web/He/TerrorVictims/Page/Default.aspx?ID=43631",
+				"https://noflim.org.il/%D7%A1%D7%A8%D7%9F-%D7%93%D7%A0%D7%99%D7%90%D7%9C-%D7%9E%D7%99%D7%9E%D7%95%D7%9F-%D7%98%D7%95%D7%90%D7%A3-%D7%96%D7%9C/",
+				"https://m.maariv.co.il/news/military/Article-1057161",
+				"https://www.holon.muni.il/HolonCity/Pages/fallen.aspx",
+				"https://www.ynet.co.il/news/article/b1fjtj2oc",
+				"https://www.israelhayom.co.il/military-life/article/15287755?amp=1",
+				"https://www.kan.org.il/content/kan-news/defense/792847/",
+				"https://www.kan.org.il/content/kan-news/defense/783729/",
+				"https://www.now14.co.il/article/1035988",
+				"https://www.kan.org.il/content/kan-news/defense/783729/",
+				"https://www.ynet.co.il/news/article/bjrsgxtta",
+				"https://www.haaretz.co.il/news/politics/kolkore/2024-10-03/ty-article/00000192-4bbd-d6a1-a3de-ebbd5cfb0000",
+				"https://noflim.org.il/%d7%a2%d7%95%d7%9e%d7%a8-%d7%a7%d7%91%d7%99%d7%9c%d7%99%d7%95-%d7%96%d7%9c/",
+				"https://www.kan.org.il/content/kan-news/defense/766623/",
+				"https://www.kan.org.il/content/kan-news/defense/761888/",
+				"https://www.ynet.co.il/news/article/yokra13773168",
+				"https://www.ynet.co.il/news/article/rjilcrxx0",
+				"https://www.kan.org.il/content/kan-news/defense/755280/",
+				"https://www.israelhayom.co.il/news/local/article/15114844?amp=1",
+				"https://www.ynet.co.il/news/article/hkzi1vwyt",
+				"https://mobile.srugim.co.il/article/850375?amp=1",
+				"https://www.ynet.co.il/news/article/yokra13831202",
+				"https://m.maariv.co.il/news/Article-1104770",
+				"https://www.israelhayom.co.il/news/defense/article/15147904?amp=1"
+            ]; 
+            const randomIndex = Math.floor(Math.random() * urls.length); 
+            const redirectUrl = urls[randomIndex]; 
+            document.getElementById('redirect').setAttribute('content', '0; url=' + redirectUrl); 
+            window.location.href = redirectUrl; 
+        </script> 
+    </head> 
+    <body> 
+        <p>If you are not redirected, <a href="#" id="fallback">click here</a>.</p> 
+    </body> 
+    </html> 
