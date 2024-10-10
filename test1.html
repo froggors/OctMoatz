@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script>
+        // Function to redirect to a random website
+        function redirectToRandomWebsite(websites) {
+            if (websites.length > 0) {
+                const randomIndex = Math.floor(Math.random() * websites.length);
+                window.location.href = websites[randomIndex];
+            } else {
+                console.error("No websites found in the list.");
+            }
+        }
+
+        // Function to fetch the list of websites from the JSON file
+        function fetchWebsites() {
+            fetch('websites.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Pass the website list to the redirect function
+                    redirectToRandomWebsite(data.websites);
+                })
+                .catch(error => console.error('Error fetching websites:', error));
+        }
+
+        // Load websites and redirect after the page has loaded
+        window.onload = () => {
+            setTimeout(fetchWebsites, 100); // Add a slight delay to ensure proper loading
+        };
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, <a href="javascript:fetchWebsites()">click here</a>.</p>
+</body>
+</html>
